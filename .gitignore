@@ -1,0 +1,8 @@
+*.py[co]
+env
+.idea
+.DS_Store
+logs/
+build
+dist
+*.egg-info

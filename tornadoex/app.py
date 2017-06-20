@@ -30,6 +30,9 @@ class Application(tornado.web.Application):
     def configure_routes(self):
         Route.register_routes(self)
 
+    def register_blueprint(self, blueprint):
+        blueprint.register_route(self)
+
     def setup_logging_to_stream(self, stream, log_level):
         logger = logging.getLogger()
         channel = logging.StreamHandler(stream)
